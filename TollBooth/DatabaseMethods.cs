@@ -39,10 +39,7 @@ namespace TollBooth
             using (_client = new DocumentClient(new Uri(_endpointUrl), _authorizationKey))
             {
                 // TODO 5: Retrieve a List of LicensePlateDataDocument objects from the collectionLink where the exported value is false.
-                licensePlates = _client.CreateDocumentQuery<LicensePlateDataDocument>(collectionLink,
-                        new FeedOptions() { EnableCrossPartitionQuery = true, MaxItemCount = 100 })
-                    .Where(l => l.exported == false)
-                    .ToList();
+                licensePlates = _client.CreateDocumentQuery<LicensePlateDataDocument>(collectionLink,new FeedOptions() { EnableCrossPartitionQuery = true, MaxItemCount = 100 }).Where(l => l.exported == false).ToList();
                 // TODO 6: Remove the line below.
             }
 
