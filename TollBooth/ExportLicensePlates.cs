@@ -18,7 +18,7 @@ namespace TollBooth
         public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)]HttpRequestMessage req, ILogger log)
         {
             int exportedCount = 0;
-            log.LogInformation("Finding license plate data to export");
+            log.LogInformation("Finding license plate data to export ");
 
             var databaseMethods = new DatabaseMethods(log);
             var licensePlates = databaseMethods.GetLicensePlatesToExport();
