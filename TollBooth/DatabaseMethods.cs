@@ -33,6 +33,10 @@ namespace TollBooth
         {
             _log.LogInformation("Retrieving license plates to export");
             int exportedCount = 0;
+            _log.LogInformation($"Endpoint: {_endpointUrl}");
+            _log.LogInformation($"AuthKey: {_authorizationKey}");
+            _log.LogInformation($"Endpoint: {_databaseId}");
+            _log.LogInformation($"Endpoint: {_collectionId}");
             var collectionLink = UriFactory.CreateDocumentCollectionUri(_databaseId, _collectionId);
             List<LicensePlateDataDocument> licensePlates;
 
