@@ -31,7 +31,7 @@ namespace TollBooth
                 {
                     await databaseMethods.MarkLicensePlatesAsExported(licensePlates);
                     exportedCount = licensePlates.Count;
-                    log.LogInformation("Finished updating the license plates");
+                    log.LogInformation("Finished updating the license plates ");
                 }
                 else
                 {
